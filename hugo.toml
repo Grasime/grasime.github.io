@@ -1,0 +1,42 @@
+baseURL = "https://grasime.github.io/"
+title = "David's Blog"
+languageCode = "en-gb"
+theme = "PaperMod"
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  defaultTheme = "auto"         # auto / dark / light
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  disableSpecial1stPost = false
+
+  # Optional: how long excerpts are
+  summaryLength = 30
+
+  [params.homeInfoParams]
+    Title = "Welcome"
+    Content = "Short intro about who you are and what this blog is."
+
+[menu]
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 20
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
