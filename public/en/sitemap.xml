@@ -2,82 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/blogging/</loc>
+    <loc>https://grasime.github.io/categories/blogging/</loc>
     <lastmod>2026-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="http://localhost:1313/pt-br/categories/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/tags/github/</loc>
-    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://grasime.github.io/categories/</loc>
     <lastmod>2026-07-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/"
+                href="https://grasime.github.io/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/pt-br/"
+                href="https://grasime.github.io/pt-br/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
+    <loc>https://grasime.github.io/tags/github/</loc>
     <lastmod>2026-07-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/my-first-post/</loc>
-    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://grasime.github.io/</loc>
     <lastmod>2026-07-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/"
+                href="https://grasime.github.io/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/pt-br/tags/"
+                href="https://grasime.github.io/pt-br/"
                 />
   </url><url>
-    <loc>http://localhost:1313/authors/</loc>
+    <loc>https://grasime.github.io/tags/hugo/</loc>
+    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://grasime.github.io/posts/</loc>
+    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://grasime.github.io/posts/my-first-post/</loc>
+    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://grasime.github.io/tags/</loc>
+    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/authors/"
+                href="https://grasime.github.io/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/pt-br/authors/"
+                href="https://grasime.github.io/pt-br/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>https://grasime.github.io/authors/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/pt-br/series/"
+                href="https://grasime.github.io/pt-br/authors/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/series/"
+                href="https://grasime.github.io/authors/"
+                />
+  </url><url>
+    <loc>https://grasime.github.io/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://grasime.github.io/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt-br"
+                href="https://grasime.github.io/pt-br/series/"
                 />
   </url>
 </urlset>

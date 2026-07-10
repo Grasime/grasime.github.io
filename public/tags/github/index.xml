@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Github on Grasime</title>
-		<link>http://localhost:1313/tags/github/</link>
+		<link>https://grasime.github.io/tags/github/</link>
 		<description>Recent content in Github on Grasime</description>
 		<generator>Hugo</generator>
 		<language>en</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/github/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://grasime.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Setting up my Hugo Blog</title>
-				<link>http://localhost:1313/posts/my-first-post/</link>
+				<link>https://grasime.github.io/posts/my-first-post/</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/my-first-post/</guid>
+				<guid>https://grasime.github.io/posts/my-first-post/</guid>
 				<description>&lt;h1 id=&#34;welcome&#34;&gt;&#xA;  Welcome&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#welcome&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;This is my first Hugo blog post.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-hugo&#34;&gt;&#xA;  Why Hugo?&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#why-hugo&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;It&amp;rsquo;s fast, simple, and uses Markdown.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Hello, world!&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## 3. View it&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Start the server:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sb&#34;&gt;```&lt;/span&gt;bash&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo server&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			</item>
 	</channel>
