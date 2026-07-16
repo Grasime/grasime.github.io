@@ -154,21 +154,7 @@ url = "https://github.com/grasime/"
 name = "LinkedIn"
 icon = "fa-brands fa-linkedin fa-2x"
 weight = 4
-url = "https://www.linkedin.com/in/johndoe/"
-
-[[params.social]]
-name = "Medium"
-icon = "fa-brands fa-medium fa-2x"
-weight = 5
-url = "https://medium.com/@johndoe"
-
-[[params.social]]
-name = "RSS"
-icon = "fa-solid fa-rss fa-2x"
-weight = 6
-url = "https://myhugosite.com/index.xml"
-rel = "alternate"
-type = "application/rss+xml"
+url = "https://www.linkedin.com/in/stefan-albu/"
 
 [languages.en]
 languageName = ":uk:"
