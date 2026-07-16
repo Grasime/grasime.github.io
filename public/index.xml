@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Grasime</title>
+		<link>http://localhost:1313/</link>
+		<description>Recent content on Grasime</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 16 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Stay Tuned</title>
+				<link>http://localhost:1313/posts/my-first-post/</link>
+				<pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/posts/my-first-post/</guid>
+				<description>&lt;p&gt;First real write-up is coming soon — probably starting with a walkthrough of &lt;a href=&#34;https://github.com/Grasime/vulnerablewebapp&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SecureBank&lt;/a&gt;, a small banking API I built to actually learn AppSec hands-on, including what happened when I deliberately reintroduced real vulnerabilities and tested whether my own CI security pipeline would catch them.&lt;/p&gt;&#xA;&lt;p&gt;Until then — the code&amp;rsquo;s public if you want a preview.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
