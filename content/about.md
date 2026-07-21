@@ -5,51 +5,52 @@ date: 2026-07-21
 
 ## Experience
 
-Securit Consultant based in the UK, currently working client engagements across web application, infrastructure testing, code reviews, CI/CD... Before moving into offensive security, I spent ~1.8 years as a SOC Analyst, developing strong foundations in security monitoring, incident response, threat detection, and attacker behaviour — experience that provides valuable defensive context when identifying and validating vulnerabilities.
+I'm a Security Consultant based in the UK, delivering penetration testing engagements across web applications, infrastructure, Active Directory, source code, and CI/CD environments.
 
-I'm currently specialising in offensive security with a focus on **web application security, Active Directory, secure software development practices, and cloud security fundamentals**. Alongside client work, I build hands-on projects around vulnerable applications, security automation, and exploitation techniques to strengthen my understanding of both offensive testing and secure engineering.
+Before moving into offensive security, I spent nearly two years as a SOC Analyst, gaining experience in threat detection, incident response, and attacker tradecraft. That defensive background influences my approach to security assessments, allowing me to focus on realistic attack paths and practical remediation.
 
-Currently working toward **OSCP**, while expanding my skills across **Application Security, DevSecOps, cloud security, CI/CD security, and security engineering**.
+My primary interests are Application Security, Product Security, cloud security, and security engineering. Alongside client engagements, I build security-focused projects centred on secure software development, automation, offensive security research, and cloud security.
+
+---
 
 ## Certifications
 
 - **BSCP** — Burp Suite Certified Practitioner
 - **CWES** — Certified Web Exploitation Specialist
-- **OSCP** — In progress
-
-## Skills & Focus
-
-### Application Security
-- Manual web application penetration testing
-- OWASP Top 10 and advanced web vulnerabilities
-- API security testing
-- Secure code review fundamentals
-- Vulnerability validation and remediation guidance
-
-### Offensive Security
-- Web and infrastructure penetration testing
-- Active Directory security assessments
-- Attack path analysis and adversary techniques
-- Exploitation fundamentals
-
-### Security Engineering & Automation
-- Python scripting for security tooling and automation
-- Building deliberately vulnerable applications for research and training
-- Integrating security testing into development workflows
-
-### Cloud & DevSecOps
-- AWS security fundamentals
-- Cloud misconfiguration assessment
-- Docker and container security fundamentals
-- CI/CD security concepts
-- Kubernetes security fundamentals
-
-### Technical Foundations
-- Linux security and administration
-- Windows security concepts
-- Networking fundamentals
-- Security tooling including Burp Suite, Nmap, BloodHound, Impacket, and Metasploit
+- **OSCP** — In Progress
 
 ---
 
-Find me on [GitHub](https://github.com/Grasime/) and [LinkedIn](https://www.linkedin.com/in/stefan-albu/).
+## Areas of Expertise
+
+### Offensive Security
+- Web application penetration testing
+- Infrastructure and Active Directory assessments
+- API security testing
+- Source code review
+- Vulnerability validation and remediation
+
+### Application Security
+- Secure development practices
+- Threat modelling
+- Secure code review
+- Security testing throughout the SDLC
+
+### Cloud & DevSecOps
+- AWS security
+- CI/CD security
+- Docker and Kubernetes
+- Cloud configuration assessment
+
+### Security Engineering
+- Python automation and security tooling
+- Secure development workflows
+- Security research and proof-of-concept development
+
+### Tooling
+
+Burp Suite • Nmap • BloodHound • Impacket • Metasploit • Docker • Git • Linux
+
+---
+
+You can also find me on [GitHub](https://github.com/Grasime) and [LinkedIn](https://www.linkedin.com/in/stefan-albu/).
