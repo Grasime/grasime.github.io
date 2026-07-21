@@ -5,7 +5,7 @@ date: 2026-07-21
 
 ## Experience
 
-Junior Penetration Tester based in the UK, currently working client engagements across web application and infrastructure testing. Before moving into offensive security, I spent ~1.8 years as a SOC Analyst, developing strong foundations in security monitoring, incident response, threat detection, and attacker behaviour — experience that provides valuable defensive context when identifying and validating vulnerabilities.
+Securit Consultant based in the UK, currently working client engagements across web application, infrastructure testing, code reviews, CI/CD... Before moving into offensive security, I spent ~1.8 years as a SOC Analyst, developing strong foundations in security monitoring, incident response, threat detection, and attacker behaviour — experience that provides valuable defensive context when identifying and validating vulnerabilities.
 
 I'm currently specialising in offensive security with a focus on **web application security, Active Directory, secure software development practices, and cloud security fundamentals**. Alongside client work, I build hands-on projects around vulnerable applications, security automation, and exploitation techniques to strengthen my understanding of both offensive testing and secure engineering.
 
