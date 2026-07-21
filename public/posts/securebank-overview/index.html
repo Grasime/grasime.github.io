@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  SecureBank: Building a Vulnerable Banking API to Learn AppSec Properly · Grasime
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Grasime">
+<meta name="description" content="I wanted to actually learn AppSec by building something, not just reading about it — so I built SecureBank, a deliberately vulnerable Flask banking API. The twist: instead of just finding bugs in someone else&rsquo;s intentionally-broken app, I built the whole thing myself — the app, the vulnerabilities, and a real CI/CD security pipeline to try and catch them.
+
+  Why a banking API
+  
+    
+    Link to heading
+  
+
+Money handling is a good stress test for security thinking. It forces you to deal with things like:">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="SecureBank: Building a Vulnerable Banking API to Learn AppSec Properly">
+	<meta name="twitter:description" content="I wanted to actually learn AppSec by building something, not just reading about it — so I built SecureBank, a deliberately vulnerable Flask banking API. The twist: instead of just finding bugs in someone else’s intentionally-broken app, I built the whole thing myself — the app, the vulnerabilities, and a real CI/CD security pipeline to try and catch them.
+Why a banking API Link to heading Money handling is a good stress test for security thinking. It forces you to deal with things like:">
+
+<meta property="og:url" content="http://localhost:1313/posts/securebank-overview/">
+	<meta property="og:site_name" content="Grasime">
+	<meta property="og:title" content="SecureBank: Building a Vulnerable Banking API to Learn AppSec Properly">
+	<meta property="og:description" content="I wanted to actually learn AppSec by building something, not just reading about it — so I built SecureBank, a deliberately vulnerable Flask banking API. The twist: instead of just finding bugs in someone else’s intentionally-broken app, I built the whole thing myself — the app, the vulnerabilities, and a real CI/CD security pipeline to try and catch them.
+Why a banking API Link to heading Money handling is a good stress test for security thinking. It forces you to deal with things like:">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-07-21T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-07-21T00:00:00+00:00">
+		<meta property="article:tag" content="Appsec">
+		<meta property="article:tag" content="Python">
+		<meta property="article:tag" content="Flask">
+		<meta property="article:tag" content="Ci-Cd">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/securebank-overview/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Grasime
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/securebank-overview/">
+              SecureBank: Building a Vulnerable Banking API to Learn AppSec Properly
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2026-07-21T00:00:00Z">
+                July 21, 2026
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/writeups/">Writeups</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/appsec/">Appsec</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/python/">Python</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/flask/">Flask</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/ci-cd/">Ci-Cd</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      
+
+
+      <div class="post-content">
+        
+        <p>I wanted to actually learn AppSec by building something, not just reading about it — so I built <a href="https://github.com/Grasime/vulnerablewebapp"  class="external-link" target="_blank" rel="noopener">SecureBank</a>, a deliberately vulnerable Flask banking API. The twist: instead of just finding bugs in someone else&rsquo;s intentionally-broken app, I built the whole thing myself — the app, the vulnerabilities, and a real CI/CD security pipeline to try and catch them.</p>
+<h2 id="why-a-banking-api">
+  Why a banking API
+  <a class="heading-link" href="#why-a-banking-api">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Money handling is a good stress test for security thinking. It forces you to deal with things like:</p>
+<ul>
+<li>Authentication and authorization done properly (or not)</li>
+<li>Race conditions when multiple requests touch the same balance</li>
+<li>Precision issues with how you store currency</li>
+<li>Access control — can User A see or touch User B&rsquo;s account?</li>
+</ul>
+<p>I used <strong>pence-based integer storage</strong> for all monetary values instead of floats, specifically to avoid the classic floating-point rounding problems that show up in real financial software. Small decision, but the kind of thing that matters once you start thinking like someone building production fintech rather than a toy CRUD app.</p>
+<h2 id="the-pipeline">
+  The pipeline
+  <a class="heading-link" href="#the-pipeline">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The part I&rsquo;m actually proudest of isn&rsquo;t the vulnerabilities — it&rsquo;s the CI/CD pipeline built around them. Every commit runs through:</p>
+<ul>
+<li><strong>Bandit</strong> — static analysis for common Python security issues</li>
+<li><strong>Semgrep</strong> — pattern-based scanning for deeper logic and security anti-patterns</li>
+<li><strong>Trivy</strong> — dependency and container vulnerability scanning</li>
+</ul>
+<p>The idea was to build the app the way a real engineering team might, complete with the automated guardrails you&rsquo;d expect in production — and then deliberately reintroduce vulnerabilities on a separate branch to see whether the pipeline actually caught them, or just looked good on paper.</p>
+<h2 id="a-concrete-example-the-idor">
+  A concrete example: the IDOR
+  <a class="heading-link" href="#a-concrete-example-the-idor">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>One of the vulnerabilities I reintroduced was a classic <strong>IDOR</strong> (Insecure Direct Object Reference) — an endpoint that let you access account or transaction data by ID without properly checking that the requesting user actually owned that resource. It&rsquo;s one of the most common real-world issues in APIs, and exactly the kind of bug that&rsquo;s easy to introduce quietly and easy to miss in review if you&rsquo;re not looking for it.</p>
+<p>I&rsquo;m saving the full technical breakdown — how it was introduced, how it could be exploited, and what the pipeline did (or didn&rsquo;t) catch — for a dedicated write-up. For now, the short version: it&rsquo;s a good reminder that authorization checks need to happen at the resource level, not just the authentication level. &ldquo;Are you logged in&rdquo; and &ldquo;do you own this&rdquo; are two different questions, and conflating them is how IDORs happen.</p>
+<h2 id="whats-next">
+  What&rsquo;s next
+  <a class="heading-link" href="#whats-next">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>This post is the overview. I&rsquo;m planning a follow-up that goes step-by-step through the IDOR — how I found it, how I&rsquo;d exploit it, and whether Bandit, Semgrep, or Trivy stood a chance of catching it automatically (spoiler: not all vulnerability classes are equally visible to static analysis).</p>
+<p>If you want to poke around yourself in the meantime, <a href="https://github.com/Grasime/vulnerablewebapp"  class="external-link" target="_blank" rel="noopener">the repo&rsquo;s public</a> — vulnerable branch included.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2026
+     Grasime 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <script data-goatcounter="https://grasime.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

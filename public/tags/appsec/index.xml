@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Posts on Grasime</title>
-		<link>http://localhost:1313/posts/</link>
-		<description>Recent content in Posts on Grasime</description>
+		<title>Appsec on Grasime</title>
+		<link>http://localhost:1313/tags/appsec/</link>
+		<description>Recent content in Appsec on Grasime</description>
 		<generator>Hugo</generator>
 		<language>en</language>
 		
@@ -12,20 +12,13 @@
 		
 			<lastBuildDate>Tue, 21 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/appsec/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>SecureBank: Building a Vulnerable Banking API to Learn AppSec Properly</title>
 				<link>http://localhost:1313/posts/securebank-overview/</link>
 				<pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/posts/securebank-overview/</guid>
 				<description>&lt;p&gt;I wanted to actually learn AppSec by building something, not just reading about it — so I built &lt;a href=&#34;https://github.com/Grasime/vulnerablewebapp&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SecureBank&lt;/a&gt;, a deliberately vulnerable Flask banking API. The twist: instead of just finding bugs in someone else&amp;rsquo;s intentionally-broken app, I built the whole thing myself — the app, the vulnerabilities, and a real CI/CD security pipeline to try and catch them.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-a-banking-api&#34;&gt;&#xA;  Why a banking API&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#why-a-banking-api&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Money handling is a good stress test for security thinking. It forces you to deal with things like:&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Stay Tuned</title>
-				<link>http://localhost:1313/posts/my-first-post/</link>
-				<pubDate>Thu, 16 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/my-first-post/</guid>
-				<description>&lt;p&gt;First real write-up is coming soon — probably starting with a walkthrough of &lt;a href=&#34;https://github.com/Grasime/vulnerablewebapp&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SecureBank&lt;/a&gt;, a small banking API I built to actually learn AppSec hands-on, including what happened when I deliberately reintroduced real vulnerabilities and tested whether my own CI security pipeline would catch them.&lt;/p&gt;&#xA;&lt;p&gt;Until then — the code&amp;rsquo;s public if you want a preview.&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
