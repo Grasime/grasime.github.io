@@ -15,7 +15,6 @@ Currently working toward **OSCP**, while expanding my skills across **Applicatio
 
 - **BSCP** — Burp Suite Certified Practitioner
 - **CWES** — Certified Web Exploitation Specialist
-- **CPTS** — Certified Penetration Testing Specialist path completed (exam not yet sat)
 - **OSCP** — In progress
 
 ## Skills & Focus
